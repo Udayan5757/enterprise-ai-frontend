@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import UploadBox from "../components/Uploadbox";
 import ChatBox from "../components/Chatbox";
+import "../styles/home.css";
 
 function Home() {
     return (
