@@ -7,7 +7,13 @@ export const login = async (email, password) => {
         password,
     });
 
-    localStorage.setItem("token", response.data.token);
+    const { token, user } = response.data;
+
+    localStorage.setItem("token", token);
+
+    if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+    }
 
     return response.data;
 };
@@ -26,11 +32,12 @@ export const register = async (name, email, password) => {
 export const logout = () => {
 
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
 
 };
 
 export const isLoggedIn = () => {
 
-    return localStorage.getItem("token") !== null;
+    return !!localStorage.getItem("token");
 
 };

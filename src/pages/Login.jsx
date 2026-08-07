@@ -19,7 +19,7 @@ function Login() {
 
             alert("Login Successful");
 
-            navigate("/");
+            navigate("/dashboard", { replace: true });
 
         } catch (err) {
 
