@@ -23,7 +23,7 @@ export default function Sidebar() {
 
   return (
 
-    <aside className="hidden w-72 border-r border-slate-800 bg-slate-950 lg:flex lg:flex-col">
+    <aside className="h-screen w-72 border-r border-slate-800 bg-slate-950 flex flex-col">
 
       <div className="flex items-center gap-3 border-b border-slate-800 px-6 py-6">
 

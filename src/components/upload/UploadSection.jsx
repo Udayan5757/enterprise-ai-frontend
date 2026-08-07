@@ -84,11 +84,11 @@ export default function UploadSection() {
 
             <div className="mb-6">
 
-                <h2 className="text-2xl font-semibold text-white">
+                <h2 className="text-xl font-semibold text-white md:text-2xl">
                     Upload Documents
                 </h2>
 
-                <p className="mt-2 text-slate-400">
+                <p className="mt-2 text-sm text-slate-400 md:text-base">
                     Upload PDF or TXT documents to your knowledge base.
                 </p>
 
@@ -119,11 +119,12 @@ export default function UploadSection() {
 
             )}
 
-            <div className="mt-6 flex justify-end">
+            <div className="mt-6 flex justify-stretch md:justify-end">
 
                 <Button
                     onClick={handleUpload}
                     disabled={!selectedFile || uploading}
+                    className="w-full md:w-auto"
                 >
                     {uploading
                         ? "Uploading..."

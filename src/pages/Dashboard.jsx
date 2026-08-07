@@ -8,29 +8,33 @@ import ChatWindow from "../components/chat/ChatWindow";
 import UploadSection from "../components/upload/UploadSection";
 
 export default function Dashboard() {
-  return (
-    <DashboardLayout>
-      <div className="space-y-6">
+    return (
 
-        <WelcomeBanner />
+        <DashboardLayout>
 
-        <StatsCard />
+            <div className="space-y-6">
 
-        <div className="grid gap-6 xl:grid-cols-3">
+                <WelcomeBanner />
 
-          <div className="space-y-6 xl:col-span-2">
+                <StatsCard />
 
-            <UploadSection />
+                <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
 
-            <ChatWindow />
+                    <div className="space-y-6 xl:col-span-2">
 
-          </div>
+                        <UploadSection />
 
-          <ActivityCard />
+                        <ChatWindow />
 
-        </div>
+                    </div>
 
-      </div>
-    </DashboardLayout>
-  );
+                    <ActivityCard />
+
+                </div>
+
+            </div>
+
+        </DashboardLayout>
+
+    );
 }

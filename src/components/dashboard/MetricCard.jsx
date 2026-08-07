@@ -1,41 +1,43 @@
 import Card from "../ui/Card";
 
 export default function MetricCard({
-  title,
-  value,
-  subtitle,
-  icon: Icon,
-  iconClassName = "text-blue-400",
+    title,
+    value,
+    subtitle,
+    icon: Icon,
+    iconClassName = "text-blue-400",
 }) {
-  return (
-    <Card className="transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/30">
+    return (
 
-      <div className="flex items-start justify-between">
+        <Card>
 
-        <div>
+            <div className="flex items-start justify-between gap-4">
 
-          <p className="text-sm text-slate-400">
-            {title}
-          </p>
+                <div className="min-w-0">
 
-          <h3 className="mt-3 text-3xl font-bold text-white">
-            {value}
-          </h3>
+                    <p className="text-sm text-slate-400">
+                        {title}
+                    </p>
 
-          <p className="mt-2 text-sm text-slate-500">
-            {subtitle}
-          </p>
+                    <h3 className="mt-2 text-2xl font-bold text-white md:text-3xl">
+                        {value}
+                    </h3>
 
-        </div>
+                    <p className="mt-2 text-sm text-slate-500 break-words">
+                        {subtitle}
+                    </p>
 
-        <div
-          className={`rounded-2xl bg-slate-900 p-4 ${iconClassName}`}
-        >
-          <Icon size={24} />
-        </div>
+                </div>
 
-      </div>
+                <div
+                    className={`shrink-0 rounded-2xl bg-slate-900 p-3 md:p-4 ${iconClassName}`}
+                >
+                    <Icon size={22} />
+                </div>
 
-    </Card>
-  );
+            </div>
+
+        </Card>
+
+    );
 }
