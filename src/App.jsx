@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
-import Register from "./pages/register";
+import Register from "./pages/Register";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 import { isLoggedIn } from "./services/authService";
